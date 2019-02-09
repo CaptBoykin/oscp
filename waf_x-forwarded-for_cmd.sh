@@ -1,5 +1,7 @@
 #!/bin/bash
 
+# The address (127.0.0.1) of the script was being utilized in SSH local forwarding 
+
 HOST=$1
 CMD=$2 
 if [[ $# -eq 0 ]];
