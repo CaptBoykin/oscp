@@ -1,5 +1,5 @@
 # oscp
-Scripts and things that I have created when I was doing OSCP.
+Scripts and things that I have created when I was doing OSCP.  I tried to prevent spoilers and other informations pertaining to specific hosts.  
 
 ### 1518_auto_setup.sh
 A script that automates the implementation of "MySQL 4.x/5.0 (Linux) - User-Defined Function (UDF) Dynamic Library (2)", in addition adds a root account to the underlying system and a bunch of other stuff.
