@@ -12,3 +12,7 @@ https://portswigger.net/bappstore/ae2611da3bbc4687953a1f4ba6a4e04c
 ### 9623_acs_cmd.sh
 A script that facilitates exploiting "Advanced Comment System 1.0 - Multiple Remote File Inclusions" in a vulnerable web application. 
 https://www.exploit-db.com/exploits/9623
+
+### 39161_privesc.py
+A modification of the "HttpFileServer 2.3.x Remote Command Execution" by  Avinash Kumar Thapa aka "-Acid", which simply lets the user specify where on the host a user defined script should be ran (instead of nc by default).  Edited so spoilers hopefully wouldn't be revealed.  The original script itself requires tweaking to work in the PWK labs anyways.
+https://www.exploit-db.com/exploits/39161
